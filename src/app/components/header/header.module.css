@@ -1,0 +1,25 @@
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  flex: 1;
+  border-bottom: 1.5px solid gray;
+}
+
+.report-title {
+  font-size: 24px;
+  position: relative;
+  color: #B32E6E;
+}
+
+.report-title::after{
+    content: '';
+    position: absolute;
+    background-color: #B32E6E;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    top: 50px;
+    left: -9px;
+}
