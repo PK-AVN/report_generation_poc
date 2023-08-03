@@ -33,7 +33,9 @@ const CompanyDetails: React.FC<CompanyDetailsProps> = ({
       <section className={styles["company-section"]}>
         <div className={styles["company-section__item--start"]}>
           <p>{name}</p>
-          <Link href={officialWebsite}>Official website</Link>
+          <Link href={officialWebsite} target="_blank">
+            Official website
+          </Link>
         </div>
         <div className={styles["company-section__item--end"]}>
           <span>
