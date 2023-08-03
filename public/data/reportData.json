@@ -1,25 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Aura report generation - Proof of Concept
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-
-## Report data is prefilled with JSON data 
-
-To learn more about structure of JSON, take a look at the following:
-
 {
   "reportTitle": "The Aura Report",
   "companyOverview": {
@@ -27,7 +5,7 @@ To learn more about structure of JSON, take a look at the following:
     "officialWebsite": "https://www.jnj.in/",
     "employeesCount": "77k",
     "IndustryType": "HealthCare",
-    "headquarters": "HQ",
+    "headquarters": "New Jersey, US",
     "employeeCoverage": 85,
     "revenue": {
       "percentage": 94.94,
@@ -79,11 +57,14 @@ To learn more about structure of JSON, take a look at the following:
     }
   },
   "improvements&Recommendations": [
-    { "description": "Deep dive into Engineering and Product roles to understand key driver for having underweight of around 30% than it s nearest peer"
+    {
+      "description": "Deep dive into Engineering and Product roles to understand key driver for having underweight of around 30% than it s nearest peer"
     },
-    { "description": "The attrition in last 3 years is at 13%, causing the company to loose over 1000 employees to direct competitors specially Medtronics. New retention strategies could significantly help, particularly in operations, sales and engineering departments."
+    {
+      "description": "The attrition in last 3 years is at 13%, causing the company to loose over 1000 employees to direct competitors specially Medtronics. New retention strategies could significantly help, particularly in operations, sales and engineering departments."
     },
-    { "description": "Demographic profile is unbalanced, showing an over representation of white employees at 65%, while women make up less than 40% in technical functions. An active approach need to be taken to enhance diversity across roles including leadership."
+    {
+      "description": "Demographic profile is unbalanced, showing an over representation of white employees at 65%, while women make up less than 40% in technical functions. An active approach need to be taken to enhance diversity across roles including leadership."
     }
   ]
 }

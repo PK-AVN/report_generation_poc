@@ -1,0 +1,47 @@
+.benchmarks header {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ce0b80;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.benchmarks header::after {
+  content: "";
+  position: absolute;
+  background-color: #f8b1dc;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  top: 45px;
+  left: 0px;
+}
+
+.benchmarks__charts label {
+  display: block;
+  position: relative;
+  color: #7d8f9b;
+  font-weight: 600;
+}
+
+.benchmarks__charts label::after {
+  content: "";
+  position: absolute;
+  background-color: #c2d1d9;
+  width: 90%;
+  height: 3px;
+  bottom: 0;
+  top: 25px;
+  left: 0px;
+}
+
+.benchmarks__charts {
+  display: flex;
+}
+
+.benchmarks__charts--left {
+  flex: 40%;
+}
+.benchmarks__charts--right {
+  flex: 60%;
+}
