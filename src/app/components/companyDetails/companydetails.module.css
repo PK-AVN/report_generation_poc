@@ -32,14 +32,15 @@
 
   .company-section__item--start p {
     color: #d51900;
-    font-size: 34px;
+    font-size: 28px;
+    text-wrap: nowrap;
     font-weight: bold;
   }
 
   .company-section__item--start a {
     font-weight: 400;
     color: #7d8f9b;
-    font-size: 24px;
+    font-size: 24px;  
   }
 
   .company-section::before {
