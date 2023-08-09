@@ -1,16 +1,21 @@
-"use client"
+"use client";
 import React from "react";
 import * as d3 from "d3";
+
+interface AreaData {
+  x: number;
+  y: number;
+}
 
 interface AreaProps {
   xScale: (value: number) => number;
   yScale: d3.ScaleLinear<number, number>;
   color: string;
-  data: any
+  data: AreaData[];
 }
 
 const Area = ({ xScale, yScale, color, data, ...props }: AreaProps) => {
-    const ref = React.useRef<SVGPathElement | null>(null);
+  const ref = React.useRef<SVGPathElement | null>(null);
 
   d3.select(ref.current).attr("opacity", 1);
 

@@ -2,7 +2,7 @@
 import React from "react";
 import { useChartFunctions } from "./helpers";
 import GridLine from "./common/GridLine";
-import styles from "./multilineChart.module.css";
+import styles from "./multilineChart.module.scss";
 import Line from "./common/Line";
 import Area from "./common/Area";
 import Axis from "./common/Axis";

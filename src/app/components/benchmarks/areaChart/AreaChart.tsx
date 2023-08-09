@@ -58,18 +58,18 @@ const AreaChart: React.FC<AreaChartProps> = ({ data, width, height }) => {
       return;
     }
 
-     // Add circles at each plotting point
-     svg
-     .selectAll("circle")
-     .data(data)
-     .enter()
-     .append("circle")
-     .attr("cx", (d) => xScale(d.x))
-     .attr("cy", (d) => yScale(d.y))
-     .attr("r", 4)
-     .attr("stroke", "#CE0B80")
-     .attr("stroke-width", 1)
-     .attr("fill", "none");
+    // Add circles at each plotting point
+    svg
+      .selectAll("circle")
+      .data(data)
+      .enter()
+      .append("circle")
+      .attr("cx", (d) => xScale(d.x))
+      .attr("cy", (d) => yScale(d.y))
+      .attr("r", 4)
+      .attr("stroke", "#CE0B80")
+      .attr("stroke-width", 1)
+      .attr("fill", "none");
 
     // Append the line to the SVG
     svg
@@ -79,8 +79,6 @@ const AreaChart: React.FC<AreaChartProps> = ({ data, width, height }) => {
       .attr("stroke", "#CE0B80")
       .attr("fill", "none")
       .attr("stroke-width", 2);
-
-   
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [xScale, yScale, boundsHeight, data]);
@@ -96,6 +94,15 @@ const AreaChart: React.FC<AreaChartProps> = ({ data, width, height }) => {
     return null;
   }
 
+  const color = (
+    <defs>
+      <linearGradient id={`gradient-#CE0B80`} x1="0%" x2="0%" y1="0%" y2="100%">
+        <stop offset="0%" stopColor="#CE0B80" stopOpacity={0.2} />
+        <stop offset="100%" stopColor="#CE0B80" stopOpacity={0} />
+      </linearGradient>
+    </defs>
+  );
+
   return (
     <svg width={width} height={height}>
       <g
@@ -103,14 +110,16 @@ const AreaChart: React.FC<AreaChartProps> = ({ data, width, height }) => {
         height={boundsHeight}
         transform={`translate(${[MARGIN.left, MARGIN.top].join(",")})`}
       >
-        <path
-          d={areaPath}
-          opacity={1}
-          stroke="none"
-          fill="#EEA2CF"
-          fillOpacity={0.4}
-        />
-       
+        <>
+          <path
+            d={areaPath}
+            opacity={1}
+            stroke="none"
+            fill="#EEA2CF"
+            fillOpacity={0.4}
+          />
+         {color}
+        </>
       </g>
       <g
         width={boundsWidth}

@@ -1,8 +1,13 @@
 "use client";
 import React from "react";
-import styles from "./insights.module.css";
+import styles from "./insights.module.scss";
+import ReportData from "@/app/helpers/types/types";
 
-const Insights = ({ data }: any) => {
+interface InsightsProps {
+  data: ReportData;
+}
+
+const Insights = ({ data }: InsightsProps) => {
   console.log(data, "in");
   return (
     <div className={styles["insights"]}>
@@ -41,5 +46,3 @@ const Insights = ({ data }: any) => {
 };
 
 export default Insights;
-
-

@@ -1,0 +1,42 @@
+@import "./../../helpers/scss/mixins/mixins";
+
+.keyPeersContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  & .leftContainer {
+    .title {
+      @include custom-title(#ce0b80, 33px, 24px, 3px);
+      margin-bottom: 10px;
+    }
+    .caption {
+      padding-block: 10px;
+      padding-inline-end: 20px;
+      color: #5A6D79;
+      font-weight: 500;
+    }
+  }
+
+  & .rightContainer {
+    display: flex;
+    flex-direction: column;
+
+    .grids {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 330px;
+      margin: 0 0 17px 0;
+    }
+
+    .grids:first-child {
+      border-bottom: 3px solid #e3ebf0;
+      padding-bottom: 19px;
+    }
+
+    .labelValue {
+      color: #5a6d79;
+    }
+  }
+}

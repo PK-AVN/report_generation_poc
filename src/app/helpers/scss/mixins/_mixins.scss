@@ -1,0 +1,17 @@
+@mixin custom-title($color, $line-height, $fontSize, $breadth) {
+  font-size: $fontSize;
+  position: relative;
+  font-weight: bold;
+  color: $color;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color;
+    width: 100%;
+    height: $breadth;
+    bottom: 0;
+    top: $line-height;
+    left: 0px;
+  }
+}

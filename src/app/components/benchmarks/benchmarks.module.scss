@@ -36,7 +36,8 @@
 }
 
 .benchmarks__charts {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50% 40%;
 }
 
 .benchmarks__charts--left {

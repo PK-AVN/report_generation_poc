@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./companydetails.module.css";
+import styles from "./companydetails.module.scss";
 import Link from "next/link";
 
 interface CompanyDetailsProps {
