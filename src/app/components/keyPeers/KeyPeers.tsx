@@ -42,13 +42,44 @@ interface KeyPeersProps {
   stats: Stats[];
 }
 
+interface CombinedData {
+  names: string[];
+  employeesCount: string[];
+  employeeCoverage: number[];
+  revenue: record[];
+}
+
+interface record {
+  percentage: number;
+  year: number;
+  currency: string;
+}
+
 const KeyPeers = ({ stats, data }: KeyPeersProps) => {
+  console.log(stats, "stats");
   const chartProps = {
     width: 290,
     height: 250,
     valueLabelPosition: 170,
     graphScaleIncrementBy: 2,
   };
+
+  const combinedData: CombinedData = stats.reduce(
+    (result, record) => {
+      result.names.push(record.name);
+      result.employeesCount.push(record.employeesCount);
+      result.employeeCoverage.push(record.employeeCoverage);
+      result.revenue.push(record.revenue);
+      return result;
+    },
+    {
+      names: [] as string[],
+      employeesCount: [] as string[],
+      employeeCoverage: [] as number[],
+      revenue: [] as record[],
+    }
+  );
+
   return (
     <>
       <div className={styles.keyPeersContainer}>
@@ -60,118 +91,82 @@ const KeyPeers = ({ stats, data }: KeyPeersProps) => {
         </div>
         <div className={styles.rightContainer}>
           <div className={styles.grids}>
-            <div className={styles.rightTitle}>Abbot</div>
-            <div className={styles.rightTitle}>Medtronics</div>
-            <div className={styles.rightTitle}>Seimens</div>
+            {combinedData.names.map((item, i) => (
+              <div key={i} className={styles.rightTitle}>
+                {item}
+              </div>
+            ))}
           </div>
           <div className={styles.grids}>
-            <div className={styles.labelValue}>77k</div>
-            <div className={styles.labelValue}>65k</div>
-            <div className={styles.labelValue}>38k</div>
+            {combinedData.employeesCount.map((item, i) => (
+              <div key={i} className={styles.labelValue}>
+                {item}
+              </div>
+            ))}
           </div>
+
           <div className={styles.grids}>
-            <div className={styles.labelValue}>66%</div>
-            <div className={styles.labelValue}>82%</div>
-            <div className={styles.labelValue}>92%</div>
+            {combinedData.employeeCoverage.map((item, i) => (
+              <div key={i} className={styles.labelValue}>
+                {item}%
+              </div>
+            ))}
           </div>
+
           <div className={styles.grids}>
-            <div className={styles.labelValue}>43.65</div>
-            <div className={styles.labelValue}>31.68</div>
-            <div className={styles.labelValue}>22.84</div>
+            {combinedData.revenue.map((item, i) => (
+              <div key={i} className={styles.labelValue}>
+                {item.percentage}
+              </div>
+            ))}
           </div>
         </div>
       </div>
       <div>
         <div className={styles.tableheaders}>
-          {/* <div>Company</div> */}
           <div style={{ display: "flex" }}>
-            <div
-              style={{
-                flex: 1,
-                textAlign: "center",
-                borderRight: "1px solid #ccc",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
+            <div className={styles.headerSeperator}>
+              <div className={styles.headerLabels}>
                 <span>Company</span>
-                <span>score</span>
               </div>
             </div>
-            <div
-              style={{
-                flex: 1,
-                textAlign: "center",
-                borderRight: "1px solid #ccc",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
+            <div className={styles.headerSeperator}>
+              <div className={styles.headerLabels}>
                 <span>Organization</span>
                 <span>score</span>
               </div>
             </div>
-            <div
-              style={{
-                flex: 1,
-                textAlign: "center",
-                borderRight: "1px solid #ccc",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
+            <div className={styles.headerSeperator}>
+              <div className={styles.headerLabels}>
                 <span>Commitment</span>
                 <span>score</span>
               </div>
             </div>
-            <div
-              style={{
-                flex: 1,
-                textAlign: "center",
-                borderRight: "1px solid #ccc",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
+            <div className={styles.headerSeperator}>
+              <div className={styles.headerLabels}>
                 <span>DE&I</span>
                 <span>score</span>
               </div>
             </div>
             <div style={{ flex: 1, textAlign: "center" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
+              <div className={styles.headerLabels}>
                 <span>Salary & Marketing</span>
                 <span>score</span>
               </div>
             </div>
           </div>
           <div style={{ display: "flex" }}>
-            <HorizontalBarChart data={data.companyOrgScore} {...chartProps} />
+            <div className={styles.legends}>
+              <p>J&J</p>
+              <p>Abbot</p>
+              <p>Medtronic</p>
+              <p>Siemens</p>
+            </div>
+            <HorizontalBarChart
+              data={data.companyOrgScore}
+              showNameLabel={false}
+              {...chartProps}
+            />
             <HorizontalBarChart
               data={data.CommitmentScore}
               showNameLabel={false}

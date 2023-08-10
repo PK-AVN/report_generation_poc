@@ -14,7 +14,7 @@
     .caption {
       padding-block: 10px;
       padding-inline-end: 20px;
-      color: #5A6D79;
+      color: #5a6d79;
       font-weight: 500;
     }
   }
@@ -38,5 +38,27 @@
     .labelValue {
       color: #5a6d79;
     }
+  }
+}
+
+.tableheaders {
+  .headerSeperator {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #ccc;
+  }
+
+  .legends {
+    display: grid;
+    gap: 28px;
+    padding-block: 60px;
+  }
+
+  .headerLabels {
+    color: #667c8a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline-start: 50px;
   }
 }

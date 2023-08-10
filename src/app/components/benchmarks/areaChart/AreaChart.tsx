@@ -58,6 +58,15 @@ const AreaChart: React.FC<AreaChartProps> = ({ data, width, height }) => {
       return;
     }
 
+     // Append the line to the SVG
+     svg
+     .append("path")
+     .attr("d", linePath)
+     .attr("opacity", 1)
+     .attr("stroke", "#CE0B80")
+     .attr("fill", "none")
+     .attr("stroke-width", 2);
+
     // Add circles at each plotting point
     svg
       .selectAll("circle")
@@ -68,20 +77,13 @@ const AreaChart: React.FC<AreaChartProps> = ({ data, width, height }) => {
       .attr("cy", (d) => yScale(d.y))
       .attr("r", 4)
       .attr("stroke", "#CE0B80")
-      .attr("stroke-width", 1)
-      .attr("fill", "none");
+      .attr("stroke-width", 2)
+      .attr("fill", "#fff");
 
-    // Append the line to the SVG
-    svg
-      .append("path")
-      .attr("d", linePath)
-      .attr("opacity", 1)
-      .attr("stroke", "#CE0B80")
-      .attr("fill", "none")
-      .attr("stroke-width", 2);
+   
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [xScale, yScale, boundsHeight, data]);
+  }, [xScale, yScale, boundsHeight, data, svgRef]);
 
   //   Build Area
   const areaBuilder = D3.area<DataPoint>()
