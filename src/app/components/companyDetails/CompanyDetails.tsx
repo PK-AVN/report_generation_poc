@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./companydetails.module.css";
+import styles from "./companydetails.module.scss";
 import Link from "next/link";
 
 interface CompanyDetailsProps {
@@ -29,15 +29,15 @@ const CompanyDetails: React.FC<CompanyDetailsProps> = ({
 }) => {
   return (
     <div className={styles["box"]}>
-      <div className={styles["box--title"]}>Company Overview</div>
-      <section className={styles["company-section"]}>
-        <div className={styles["company-section__item--start"]}>
+      <div className={styles["boxTitle"]}>Company Overview</div>
+      <section className={styles["companySection"]}>
+        <div className={styles["itemStart"]}>
           <p>{name}</p>
           <Link href={officialWebsite} target="_blank">
             Official website
           </Link>
         </div>
-        <div className={styles["company-section__item--end"]}>
+        <div className={styles["itemEnd"]}>
           <span>
             <p>{employeesCount}</p>
             <label># of employees</label>

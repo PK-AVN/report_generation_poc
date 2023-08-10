@@ -11,5 +11,181 @@
     { "x": 2021, "y": 60 },
     { "x": 2022, "y": 61 },
     { "x": 2023, "y": 62 }
+  ],
+  "revenuePerEmployee": [
+    {
+      "name": "J&J",
+      "value": 1.4,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 0.6,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 0.5,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 0.6,
+      "color": "#E3EBF0"
+    }
+  ],
+  "noOfJuniorsPerManager": [
+    {
+      "name": "J&J",
+      "value": 2.1,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 2.3,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 3.3,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 2.8,
+      "color": "#E3EBF0"
+    }
+  ],
+  "noOfManagersPerdirector": [
+    {
+      "name": "J&J",
+      "value": 1.9,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 3.0,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 1.5,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 2.5,
+      "color": "#E3EBF0"
+    }
+  ],
+  "noOfDirectorsPerCSuite": [
+    {
+      "name": "J&J",
+      "value": 3.5,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 2.0,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 4.1,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 1.8,
+      "color": "#E3EBF0"
+    }
+  ],
+  "companyOrgScore": [
+    {
+      "name": "J&J",
+      "value": 54,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 52,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 52,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 57,
+      "color": "#E3EBF0"
+    }
+  ],
+  "CommitmentScore": [
+    {
+      "name": "J&J",
+      "value": 53,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 53,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 40,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 49,
+      "color": "#E3EBF0"
+    }
+  ],
+  "DEAndIScore": [
+    {
+      "name": "J&J",
+      "value": 81,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 69,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 63,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 52,
+      "color": "#E3EBF0"
+    }
+  ],
+  "SalaryAndMarketingScore": [
+    {
+      "name": "J&J",
+      "value": 70,
+      "color": "#C11178"
+    },
+    {
+      "name": "Abbot",
+      "value": 67,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Medtronic",
+      "value": 66,
+      "color": "#E3EBF0"
+    },
+    {
+      "name": "Siemens",
+      "value": 64,
+      "color": "#E3EBF0"
+    }
   ]
 }

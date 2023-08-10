@@ -45,18 +45,18 @@
       }
     }
   ],
-  "companyStrengths": {
-    "hierarchicalLayerRatio": {
+  "companyStrengths": [
+    {
       "description": "Healthy hierarchical layer ratio of 2 with high promotion rates at 7%"
     },
-    "scalingEfficiency": {
+    {
       "description": "Well equipped to scale in an efficient and sustainable manner with 1.36 $M per employee which is more than double than it s nearest peer"
     },
-    "salesMarketingPerformance": {
+    {
       "description": "Sales & Marketing team is overperforming vs peers , with 0.1 employees per $M revenue which is leaner by 90% to it s nearest peer"
     }
-  },
-  "improvements&Recommendations": [
+  ],
+  "improvementsAndRecommendations": [
     {
       "description": "Deep dive into Engineering and Product roles to understand key driver for having underweight of around 30% than it s nearest peer"
     },
