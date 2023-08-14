@@ -56,7 +56,7 @@ interface record {
 }
 
 const KeyPeers = ({ stats, data }: KeyPeersProps) => {
-  console.log(stats, "stats");
+//   console.log(stats, "stats");
   const chartProps = {
     width: 290,
     height: 250,

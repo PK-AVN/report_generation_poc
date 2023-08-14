@@ -34,6 +34,7 @@ const Axis = ({
       .attr("opacity", 0.5)
       .attr("color", "white")
       .attr("font-size", "0.75rem");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scale, ticks, tickFormat]);
 
   return <g ref={ref} transform={transform} {...props} />;

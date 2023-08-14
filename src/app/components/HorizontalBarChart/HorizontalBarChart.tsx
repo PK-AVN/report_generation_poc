@@ -27,7 +27,7 @@ const HorizontalBarChart = ({
   chartName,
 }: HorizontalBarChartProps) => {
   const barHeight = 30;
-  console.log(data, "Chartdata");
+//   console.log(data, "Chartdata");
   const barGroups =
     data?.map(
       (item: { name: string; value: number; color: string }, i: number) => (
