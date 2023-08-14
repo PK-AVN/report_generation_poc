@@ -23,7 +23,7 @@ export const useChartFunctions = ({
   width,
   height,
 }: chartFunctionsProps) => {
-  console.log(data, "custom hook data");
+  // console.log(data, "custom hook data");
   const xMin = useMemo(
     () => d3.min(data, ({ items }) => d3.min(items, ({ x }) => x)) ?? 0,
     [data]
@@ -49,7 +49,7 @@ export const useChartFunctions = ({
     [data]
   );
 
-  console.log(xMin, xMax, yMin, yMax, "values");
+  // console.log(xMin, xMax, yMin, yMax, "values");
 
   const yScale = useMemo(() => {
     const indention = (yMax - yMin) * 0.5;

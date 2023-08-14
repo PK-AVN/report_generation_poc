@@ -8,7 +8,7 @@ interface InsightsProps {
 }
 
 const Insights = ({ data }: InsightsProps) => {
-  console.log(data, "in");
+  // console.log(data, "in");
   return (
     <div className={styles["insights"]}>
       <div className={styles["insights__left"]}>
